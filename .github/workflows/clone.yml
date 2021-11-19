@@ -21,4 +21,4 @@ jobs:
           script: |
             cd ..
             cd pub
-            git clone
+            git clone git@github.com:justinrobinson1020/justinrobinson1020.github.io.git
