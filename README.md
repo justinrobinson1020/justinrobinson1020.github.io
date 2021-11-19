@@ -1,3 +1,5 @@
 # cmsc389T-web-template
 
-Website Template for Project 5
+Website for project 5
+
+Notice the cool new background color
