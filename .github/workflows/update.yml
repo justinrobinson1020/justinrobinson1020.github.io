@@ -28,4 +28,5 @@ jobs:
           script: |
             cd ..
             cd pub
+            cd justinrobinson1020.github.io
             git pull
