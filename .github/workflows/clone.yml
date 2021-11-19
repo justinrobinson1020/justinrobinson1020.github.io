@@ -5,21 +5,20 @@ on:
 
 jobs:
   clone:
-    name: Login and Clone Test
-    
     runs-on: ubuntu-latest
 
     # Copies all files to terpconnect
     steps:
       # Connect using ssh
       - uses: actions/checkout@v2
+      - name: Login and Clone Test
       - uses: appleboy/ssh-action@master
         with:
-          HOST: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
-          PASSWORD: ${{ secrets.PASSWORD }}
-          PORT: ${{ secrets.PORT }}
-          SCRIPT: |
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
             cd ..
             cd pub
             git clone 
