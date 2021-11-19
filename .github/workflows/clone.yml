@@ -5,8 +5,6 @@ on:
 
 jobs:
   clone:
-    name: Login and Clone Test
-    
     runs-on: ubuntu-latest
 
     # Copies all files to terpconnect
