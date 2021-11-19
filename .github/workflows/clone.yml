@@ -11,7 +11,7 @@ jobs:
     
     steps:
       # Copies all files to terpconnect
-      - name: Login and Clone Test
+      - name: Login and Clone Repo
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
