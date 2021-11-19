@@ -11,7 +11,11 @@ jobs:
 
     # Copies all files to terpconnect
     steps:
+      - name: checkout project
       # Connect using ssh
+      - uses: actions/checkout@v2
+      
+      - name: ssh
       - uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
