@@ -1,33 +1,25 @@
-
-# This is a basic workflow to help you get started with Actions
-
 name: Terpconnect Clone
 
-# Controls when the workflow will run
 on:
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   clone:
-    # The type of runner that the job will run on
+    name: Login and Clone Test
+    
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    # Copies all files to terpconnect
     steps:
-      # Copies all files to terpconnect
-      - name: Login and Clone Test
-      
       # Connect using ssh
-        uses: appleboy/ssh-action@master
-      
+      - uses: actions/checkout@v2
+      - uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          script: |
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          PORT: ${{ secrets.PORT }}
+          SCRIPT: |
             cd ..
             cd pub
-            git clone
+            git clone 
