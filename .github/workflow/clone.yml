@@ -27,8 +27,8 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            cd .. |
-            cd pub |
+            cd ..
+            cd pub
             touch test.html
 
       
